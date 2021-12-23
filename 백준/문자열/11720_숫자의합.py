@@ -1,6 +1,18 @@
+# 입력할 숫자의 개수를 입력한다.
 N=int(input())
-num=input()
+# N개 만큼 숫자를 문자열로 입력해준다.
+num=str(input())
+# sum 초기값 설정
 sum=0
-for i in num:
-    sum += int(i)
+# 만약 입력할 숫자의 개수와 입력한 숫자의 개수가 일치하다면
+if N == len(num):
+    # 문자열로 입력받은 num을 첫글자부터 순회하면서
+    for i in num:
+        # sum에 차례대로 더해준다.
+        sum += int(i)
+# 입력할 숫자의 개수와 입력한 숫자의 개수가 일치하지 않는다면
+else:
+    sum = '입력할 숫자의 개수와 입력한 숫자의 개수가 일치하지 않습니다.'
+
+# 결과값 출력
 print(sum)
