@@ -27,7 +27,7 @@ def solution(a, b, g, s, w, t):
             # 주어진 시간 내에서 왕복할 수 있는 횟수
             move_cnt = mid // (now_time * 2)
 
-            # 편도로 이동할 수 있으면 편도 추가
+            # 편도로 이동할 수 있으면 편도로 가는 행위도 추가
             if mid % (now_time * 2) >= now_time:
                 move_cnt += 1
 
