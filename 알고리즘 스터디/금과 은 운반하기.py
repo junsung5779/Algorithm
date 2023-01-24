@@ -31,6 +31,9 @@ def solution(a, b, g, s, w, t):
             if mid % (now_time * 2) >= now_time:
                 move_cnt += 1
 
+            # (주어진 시간 내에서 왕복할 수 있는 횟수 x 최대 무게)가 도시에 있는 자원보다 높은 경우
+            # 도시에 있는 해당 자원을 전부 신도시로 이전
+            # 아닐 경우 ((주어진 시간 내에서 왕복할 수 있는 횟수 x 최대 무게)를 gold에 더함)
             gold += now_gold if (now_gold < move_cnt * now_weight) else move_cnt * now_weight
             silver += now_silver if (now_silver < move_cnt * now_weight) else move_cnt * now_weight
             total += now_gold + now_silver if (now_gold + now_silver < move_cnt * now_weight) else move_cnt * now_weight
