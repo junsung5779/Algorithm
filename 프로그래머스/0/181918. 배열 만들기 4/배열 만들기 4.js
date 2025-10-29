@@ -7,9 +7,9 @@ function solution(arr) {
             while (stk[stk.length-1] >= arr[i]) {
                stk.length -= 1;
             }
-            // if (stk[stk.length-1] < arr[i]) {
+            if (stk[stk.length-1] < arr[i] || stk.length === 0) {
                 stk.push(arr[i]);
-            // }
+            }
         }
     }
     return stk;
